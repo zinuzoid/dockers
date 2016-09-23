@@ -12,7 +12,6 @@ RUN apk --no-cache add \
   rsync \
   py-httplib2 openssh && \
   apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && \
-  py-netifaces && \
   py-msgpack && \
   rm -rf /var/cache/apk/*
 
