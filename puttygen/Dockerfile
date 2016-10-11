@@ -4,3 +4,7 @@ RUN apk --no-cache add \
   putty && \
   rm -rf /var/cache/apk/*
 
+RUN mkdir -p /app
+VOLUME /app
+WORKDIR /app
+
