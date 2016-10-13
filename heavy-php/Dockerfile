@@ -15,6 +15,7 @@ RUN apt-get update && \
 	php5-mongo \
 	php-amqplib && \
 	docker-php-ext-install \
+	bcmath \
 	pdo \
 	pdo_mysql \
 	mysql \
