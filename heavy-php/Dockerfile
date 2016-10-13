@@ -12,7 +12,8 @@ RUN apt-get update && \
 	php5-cgi \
 	php5-mysql \
 	php5-mcrypt \
-	php5-mongo && \
+	php5-mongo \
+	php-amqplib && \
 	docker-php-ext-install \
 	pdo \
 	pdo_mysql \
