@@ -5,5 +5,5 @@ RUN apk --no-cache add \
   apache2-utils && \
   rm -rf /var/cache/apk/*
 
-CMD ab
+ENTRYPOINT ["ab"]
 
