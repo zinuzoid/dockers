@@ -14,3 +14,4 @@ RUN mkdir -p /app
 VOLUME /app
 WORKDIR /app
 
+ENTRYPOINT ["puttygen"]
