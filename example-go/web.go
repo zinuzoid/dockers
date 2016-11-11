@@ -28,7 +28,7 @@ func poweredByHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	// print the string to the ResponseWriter
 	hostname, _ := os.Hostname()
-	fmt.Fprintf(w, "Powered by %v\non %v\n", powered, hostname)
+	fmt.Fprintf(w, "Powered by %v on %v\n", powered, hostname)
 }
 
 // healthcheckHandler returns 200 for kubernetes healthchecks.
