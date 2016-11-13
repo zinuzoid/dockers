@@ -5,4 +5,6 @@ COPY . /go/src/app
 WORKDIR /go/src/app
 RUN go build
 
+EXPOSE 3000
+
 CMD ["./app"]
