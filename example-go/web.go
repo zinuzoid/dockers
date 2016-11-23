@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 // main starts an HTTP server listening on $PORT which dispatches to request handlers.
@@ -33,6 +34,7 @@ func poweredByHandler(w http.ResponseWriter, r *http.Request) {
 
 // healthcheckHandler returns 200 for kubernetes healthchecks.
 func healthcheckHandler(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(32000)
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte{})
 }
