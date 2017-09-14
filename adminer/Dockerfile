@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5-apache
 MAINTAINER Jetsada Machom jim@imjim.im
 
 RUN apt-get update && \
