@@ -8,8 +8,12 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-        hostname, _ := os.Hostname()
-        fmt.Fprintf(w, "Powered on %v\n", hostname)
+	hostname, _ := os.Hostname()
+	poweredBy := os.Getenv("POWERED_BY")
+	if len(poweredBy) == 0 {
+		poweredBy = "Go"
+	}
+	fmt.Fprintf(w, "Powered by %v on %v\n\n", poweredBy, hostname)
 
 	r.Write(w)
 }
@@ -19,5 +23,5 @@ func main() {
 
 	http.HandleFunc("/", handler)
 	log.Println("Starting http server on port:", port)
-	log.Fatal(http.ListenAndServe(":" + port, nil))
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
